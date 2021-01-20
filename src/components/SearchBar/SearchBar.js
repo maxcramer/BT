@@ -3,23 +3,24 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
     state = {
         query: '',
-        results: [],
     }
 
     handleOnInputChange = (e) => {
-        const query = e.target.value;
-        this.setState({query: query});
+        let searchInput
+        this.props.parentCallback (
+            searchInput = e.target.value,
+            this.setState({query: searchInput}),
+    
+        )
     };
 
     render() {
-        const { query } = this.state;
-        console.log(this.state)
+        
         return (
             <div>
                 <input 
-                    input={this.state.query}
                     type='text'
-                    value={query}
+                    query={this.state.query}
                     placeholder="Search Articles"
                     onChange={this.handleOnInputChange}
                 />
