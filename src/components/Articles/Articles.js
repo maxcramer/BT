@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Article from '../Article/Article';
 
 
 class Articles extends Component {
@@ -15,18 +16,34 @@ class Articles extends Component {
             .then(data => {
                  const articles = data.articles.slice(0 ,10);
                  console.log(articles);
-                //  const updatedArticles 
+                 const updatedArticles = articles.map(article => {
+                     return {
+                         ...article
+                     }
+                 });
+                 this.setState({articles: updatedArticles})
                 })
-            .then(response => {
-                // const articles = response.data.slice(0, 10);
-                // console.log(articles)
-            })
+                .catch(error => {
+                    console.log(error);
+                });
     }
 
     render() {
+        let articles = <p>Articles not found</p>
+        if (!this.state.error) {
+            articles = this.state.articles.map(article => {
+                return <Article 
+                            key={article.title}
+                            title={article.title}
+                            author={article.author}
+                            description={article.description}
+                        />
+            })
+        }
         return (
             <div>
-                <h1>Artilces</h1>
+                <h1>Articles</h1>
+                {articles}
             </div>
         )
     }
