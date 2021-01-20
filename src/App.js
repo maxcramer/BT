@@ -6,7 +6,15 @@ import Backdrop from './components/Backdrop/Backdrop';
 
 class App extends Component {
   state = {
-    
+    sideDrawerOpen: false,
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState((prevState) => {
+      return {
+        sideDrawerOpen: !prevState.sideDrawerOpen
+      }
+    })
   }
 
   render() {
