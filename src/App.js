@@ -5,6 +5,10 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 
 class App extends Component {
+  state = {
+    
+  }
+
   render() {
     return (
       <div style={{height: '100%'}}>
