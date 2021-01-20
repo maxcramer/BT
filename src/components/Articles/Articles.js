@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Article from '../Article/Article';
 
+import './Articles.css';
 
 class Articles extends Component {
     state = {
@@ -41,8 +42,7 @@ class Articles extends Component {
             })
         }
         return (
-            <div>
-                <h1>Articles</h1>
+            <div className="Articles">
                 {articles}
             </div>
         )
