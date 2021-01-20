@@ -7,11 +7,12 @@ import './Articles.css';
 
 class Articles extends Component {
     state = {
-        articles: []
+        articles: [],
+        query: 'everything'
     }
 
     componentDidMount () {
-        const url = 'http://newsapi.org/v2/everything?' + `q=everything&` + 'apiKey=b878ce7c61644b96862ef6d5ca7a3bf9';
+        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=b878ce7c61644b96862ef6d5ca7a3bf9';
         const req = new Request(url);
         fetch(req)
             .then(response => response.json())
@@ -38,13 +39,15 @@ class Articles extends Component {
                             key={article.title}
                             title={article.title}
                             author={article.author}
-                            content={article.content}
+                            content={article.content.slice(0, 150)}
                         />
             })
         }
         return (
             <div className="Articles">
-                <SearchBar />
+                <SearchBar 
+                    value={this.state.input}
+                />
                 {articles}
             </div>
         )

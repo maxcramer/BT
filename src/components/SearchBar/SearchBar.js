@@ -4,8 +4,6 @@ class SearchBar extends Component {
     state = {
         query: '',
         results: [],
-        loading: false,
-        message: ''
     }
 
     handleOnInputChange = (e) => {
@@ -19,7 +17,7 @@ class SearchBar extends Component {
         return (
             <div>
                 <input 
-                    name="query"
+                    input={this.state.query}
                     type='text'
                     value={query}
                     placeholder="Search Articles"
