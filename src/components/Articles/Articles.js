@@ -11,7 +11,7 @@ class Articles extends Component {
     }
 
     componentDidMount () {
-        const url = 'http://newsapi.org/v2/everything?' + 'q=everything&' + 'apiKey=b878ce7c61644b96862ef6d5ca7a3bf9';
+        const url = 'http://newsapi.org/v2/everything?' + `q=everything&` + 'apiKey=b878ce7c61644b96862ef6d5ca7a3bf9';
         const req = new Request(url);
         fetch(req)
             .then(response => response.json())
@@ -32,7 +32,7 @@ class Articles extends Component {
 
     render() {
         let articles = <p>Articles not found</p>
-        if (!this.state.error) {
+        if (!this.state.error || this.articles.length > 0) {
             articles = this.state.articles.map(article => {
                 return <Article 
                             key={article.title}
