@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import Articles from './components/Articles/Articles';
 
 class App extends Component {
   state = {
@@ -33,7 +34,7 @@ class App extends Component {
           <SideDrawer show={this.state.sideDrawerOpen}/>
           {backdrop}
           <main style={{marginTop: '64px'}}>
-            <p>Page content</p>
+            <Articles />
           </main>
       </div>
     );
