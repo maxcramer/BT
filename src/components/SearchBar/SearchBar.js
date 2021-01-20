@@ -10,16 +10,18 @@ class SearchBar extends Component {
 
     handleOnInputChange = (e) => {
         const query = e.target.value;
-        console.log(query);
+        this.setState({query: query});
     };
 
     render() {
+        const { query } = this.state;
         console.log(this.state)
         return (
             <div>
                 <input 
+                    name="query"
                     type='text'
-                    value=""
+                    value={query}
                     placeholder="Search Articles"
                     onChange={this.handleOnInputChange}
                 />
