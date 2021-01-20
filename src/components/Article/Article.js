@@ -6,7 +6,7 @@ const Article = (props) => (
     <div className="Article">
         Author: {props.author}
         Title: {props.title}
-        Description: {props.description}
+        Description: {props.content.slice(0, 150)}...
     </div>
 );
 

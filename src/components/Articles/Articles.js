@@ -37,7 +37,7 @@ class Articles extends Component {
                             key={article.title}
                             title={article.title}
                             author={article.author}
-                            description={article.description}
+                            content={article.content}
                         />
             })
         }
