@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Article from '../Article/Article';
+import SearchBar from '../SearchBar/SearchBar';
 
 import './Articles.css';
 
@@ -43,6 +44,7 @@ class Articles extends Component {
         }
         return (
             <div className="Articles">
+                <SearchBar />
                 {articles}
             </div>
         )
