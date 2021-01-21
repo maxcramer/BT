@@ -4,3 +4,19 @@
     justify-content: center;
     margin: auto;
 }
+
+.articles__container {
+    height: 500px;
+    overflow: scroll;
+    margin: 16px 0;
+}
+
+@media(min-width: 798px) {
+    .articles__container {
+        height: 500px;
+        overflow: scroll;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

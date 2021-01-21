@@ -60,7 +60,9 @@ class Articles extends Component {
                     parentCallback = {this.callbackFunction}
                     query={this.state.query}
                 />
-                {articles}
+                <div className="articles__container">
+                    {articles}
+                </div>
             </div>
         )
     }

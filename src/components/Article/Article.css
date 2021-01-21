@@ -4,7 +4,7 @@
     text-align: left;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
-    margin: 10px;
+    margin: auto;
     box-sizing: border-box;
     cursor: pointer;
     color: #333333;
@@ -22,5 +22,6 @@
 @media(min-width: 769px) {
     .Article {
         width: 20%;
+        margin: 10px;
     }
 }
