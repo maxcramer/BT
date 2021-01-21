@@ -6,7 +6,7 @@
 }
 
 .articles__container {
-    height: 500px;
+    height: 450px;
     overflow: scroll;
     margin: 16px 0;
 }
