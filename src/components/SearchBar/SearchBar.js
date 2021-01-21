@@ -9,11 +9,14 @@ class SearchBar extends Component {
 
     handleOnInputChange = (e) => {
         let searchInput
-        this.props.parentCallback (
-            searchInput = e.target.value,
-            this.setState({query: searchInput}),
-    
-        )
+        if(this.props.parentCallback) {
+            this.props.parentCallback (
+                searchInput = e.target.value,
+                this.setState({query: searchInput}),
+        
+            )
+        }
+      
     };
 
     render() {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 
 import Article from '../Article/Article';
 import SearchBar, { query } from '../SearchBar/SearchBar';
@@ -9,19 +9,42 @@ class Articles extends Component {
     state = {
         articles: [],
         query: '',
+        lastQuery: '',
     }
 
- 
 
 
-    componentDidUpdate () {
-        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=4191f6171e1049f78a4ab06cccfe4c32';
+    componentDidMount () {
+        const url = 'http://newsapi.org/v2/everything?' + `q=everything&` + 'apiKey=db73b9b5eebb4126b000201a551dbecb';
         const req = new Request(url);
         fetch(req)
             .then(response => response.json())
             .then(data => {
                  const articles = data.articles.slice(0 ,10);
-                //  console.log(articles);
+                 console.log(articles);
+                 const updatedArticles = articles.map(article => {
+                     return {
+                         ...article, 
+                         content: article.content.slice(0, 150)
+                     }
+                 });
+                 this.setState({articles: updatedArticles})
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+    }
+
+    componentDidUpdate () {
+        if(this.state.query === this.state.lastQuery) return;
+        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=db73b9b5eebb4126b000201a551dbecb';
+        const req = new Request(url);
+        fetch(req)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({lastQuery: this.state.query})
+                 const articles = data.articles.slice(0 ,10);
+                 console.log(articles);
                  const updatedArticles = articles.map(article => {
                      return {
                          ...article, 
@@ -38,6 +61,7 @@ class Articles extends Component {
     // handleSearch = () => {
     //     this.setState({query: this.props.query})
     // }
+
 
        callbackFunction = ( childData ) => {
         this.setState({query: childData})
@@ -57,9 +81,10 @@ class Articles extends Component {
         return (
             <div className="Articles">
                 <SearchBar 
-                    parentCallback = {this.callbackFunction}
+                    // parentCallback = {this.callbackFunction}
                     query={this.state.query}
                 />
+                <button onClick={this.callbackFunction}>Search</button>
                 <div className="articles__container">
                     {articles}
                 </div>
