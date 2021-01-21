@@ -20,10 +20,10 @@ const Toolbar = (props) => (
                         <a href="/">Link 1</a>
                     </li>
                     <li>
-                        <a href="/">Link 2</a>
+                        <a href="/2">Link 2</a>
                     </li>
                     <li>
-                        <a href="/">Link 3</a>
+                        <a href="/3">Link 3</a>
                     </li>
                 </ul>
             </div>

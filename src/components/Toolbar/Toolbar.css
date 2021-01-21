@@ -51,7 +51,11 @@
 
 .toolbar_navigation-items a:hover,
 .toolbar_navigation-items a:active {
-    color: darkblue;
+    cursor: pointer;
+    color: lightgray;
+    background-color: purple;
+    border-bottom: 4px solid #40A4C8;
+    padding: 10px;
 }
 
 @media (max-width: 768px) {
