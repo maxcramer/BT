@@ -1,0 +1,8 @@
+.Footer_Container {
+    position: absolute;
+    bottom: 0;
+    height: 56px;
+    width: 100%;
+    background-color: #5514b4;
+    color: #ffffff;
+}

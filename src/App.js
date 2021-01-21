@@ -6,6 +6,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 import Articles from './components/Articles/Articles';
 
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   state = {
@@ -39,6 +40,7 @@ class App extends Component {
             <h1>BT React Code Test - By Max Cramer - 21/01/2020</h1>
             <Articles />
           </main>
+          <Footer />
       </div>
     );
   }
