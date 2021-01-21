@@ -7,7 +7,8 @@
     margin: 10px;
     box-sizing: border-box;
     cursor: pointer;
-    color: #333333
+    color: #333333;
+    font-family: calibri;
 }
 
 .Article h4, h5 {
