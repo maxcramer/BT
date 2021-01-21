@@ -3,7 +3,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: lightblue;
+    background-color: #5514b4;
+    box-shadow: 2px 0px 7px #5514b4;
     height: 56px;
 }
 
@@ -16,6 +17,10 @@
 
 .toolbar__logo {
     margin-left: 1rem;
+}
+
+.logo {
+    height: 40px;
 }
 
 .toolbar__logo a {

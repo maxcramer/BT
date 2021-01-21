@@ -48,7 +48,7 @@ class Articles extends Component {
                             key={article.title}
                             title={article.title}
                             author={article.author}
-                            content={article.content}
+                            content={article.content.slice(0, 150)}
                         />
             })
         }
@@ -56,7 +56,7 @@ class Articles extends Component {
             <div className="Articles">
                 <SearchBar 
                     parentCallback = {this.callbackFunction}
-                    query={console.log('Articles | The current this.state.query is', this.state.query)}
+                    query={this.state.query}
                 />
                 {articles}
             </div>

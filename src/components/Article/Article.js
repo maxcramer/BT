@@ -5,11 +5,15 @@ import './Article.css';
 
 
 const Article = (props) => {
+
+    const reduceContent = (props) => props.content.slice(0, 150);
+    
     return (
     <div className="Article">
         <h4>{props.title}</h4>
         <h5>By {props.author}</h5>
-        <p>{props.content}...</p>
+        <p>{reduceContent}...</p>
+        <p>{props.publisher}</p>
     </div>
     )
 };

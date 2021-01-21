@@ -34,6 +34,7 @@ class App extends Component {
           <SideDrawer show={this.state.sideDrawerOpen}/>
           {backdrop}
           <main style={{marginTop: '64px'}}>
+            <h1>BT React Code Test - By Max Cramer - 21/01/2020</h1>
             <Articles />
           </main>
       </div>
