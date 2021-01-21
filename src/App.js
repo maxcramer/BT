@@ -5,6 +5,8 @@ import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
 import Articles from './components/Articles/Articles';
 
+import './App.css';
+
 class App extends Component {
   state = {
     sideDrawerOpen: false,
@@ -29,7 +31,7 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>;
     }
     return (
-      <div style={{height: '100%'}}>
+      <div className="App">
           <Toolbar drawerClickedHandler={this.drawerToggleClickHandler}/>
           <SideDrawer show={this.state.sideDrawerOpen}/>
           {backdrop}
