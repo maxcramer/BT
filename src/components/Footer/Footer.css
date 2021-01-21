@@ -5,4 +5,17 @@
     width: 100%;
     background-color: #5514b4;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.Footer_Container p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Footer_Container img {
+    height: 25px;
+    padding: 5px
 }
