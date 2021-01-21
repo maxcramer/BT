@@ -16,6 +16,8 @@ class SearchBar extends Component {
         this.props.callBack(this.state.query);
     };
 
+   
+
     render() {
         
         return (
@@ -26,7 +28,7 @@ class SearchBar extends Component {
                     placeholder="Search Articles"
                     onChange={this.handleOnInputChange}
                 />
-                <button onClick={this.handleButtonClick}>Search</button>
+                <button disabled={!this.state.query} onClick={this.handleButtonClick}>Search</button>
 
             </div>
         )

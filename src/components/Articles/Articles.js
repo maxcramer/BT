@@ -26,10 +26,12 @@ class Articles extends Component {
 
   componentDidMount() {
     this.doSearch('everything');
+    if (this.state.query === this.state.lastQuery) return;
+    if(this.state.query === '') return;
   }
 
   componentDidUpdate() {
-    if (this.state.query === this.state.lastQuery) return;
+    
   }
 
   // handleSearch = () => {
@@ -39,6 +41,7 @@ class Articles extends Component {
   doSearch = async (query) => {
     const articles = await fetchArticles(query);
     const updatedArticles = articles.map((article) => {
+        if(!article.content) article.content = '';
         return {
           ...article,
           content: article.content.slice(0, 150),
