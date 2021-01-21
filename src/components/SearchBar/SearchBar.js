@@ -7,16 +7,13 @@ class SearchBar extends Component {
         query: '',
     }
 
-    handleOnInputChange = (e) => {
-        let searchInput
-        if(this.props.parentCallback) {
-            this.props.parentCallback (
-                searchInput = e.target.value,
-                this.setState({query: searchInput}),
-        
-            )
-        }
-      
+    handleOnInputChange = (e => {
+        this.setState({ query: e.target.value });      
+        console.log('e.target.value: ', e.target.value);
+    });
+
+    handleButtonClick = () => {
+        this.props.callBack(this.state.query);
     };
 
     render() {
@@ -25,10 +22,12 @@ class SearchBar extends Component {
             <div className="SearchBar_container">
                 <input 
                     type='text'
-                    query={this.state.query}
+                    value={this.state.query}
                     placeholder="Search Articles"
                     onChange={this.handleOnInputChange}
                 />
+                <button onClick={this.handleButtonClick}>Search</button>
+
             </div>
         )
     }
