@@ -1,6 +1,6 @@
 {
   "name": "bt-code_test",
-  "homepage": "https://maxcramer.github.io/BT/",
+  "homepage": "index.html",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
