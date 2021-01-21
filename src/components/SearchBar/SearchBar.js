@@ -17,8 +17,9 @@ class SearchBar extends Component {
     render() {
         
         return (
-            <div>
+            <div style={{width: '100%', textAlign: 'center'}}>
                 <input 
+                    style={{width: '20%'}}
                     type='text'
                     query={this.state.query}
                     placeholder="Search Articles"

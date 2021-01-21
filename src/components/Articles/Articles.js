@@ -11,22 +11,21 @@ class Articles extends Component {
         query: '',
     }
 
-    callbackFunction = ( childData ) => {
-        this.setState({query: childData})
-    }
+ 
 
 
     componentDidUpdate () {
-        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=b4542b7a13db4caabf79e4cbbe8e19e8';
+        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=d7168330d14e4635a248d6b0165621f4';
         const req = new Request(url);
         fetch(req)
             .then(response => response.json())
             .then(data => {
                  const articles = data.articles.slice(0 ,10);
-                 console.log(articles);
+                //  console.log(articles);
                  const updatedArticles = articles.map(article => {
                      return {
-                         ...article
+                         ...article, 
+                         content: article.content.slice(0, 150)
                      }
                  });
                  this.setState({articles: updatedArticles})
@@ -40,6 +39,9 @@ class Articles extends Component {
     //     this.setState({query: this.props.query})
     // }
 
+       callbackFunction = ( childData ) => {
+        this.setState({query: childData})
+    }
     render() {
         let articles = <p>Articles not found</p>
         if (!this.state.error || this.articles === null) {

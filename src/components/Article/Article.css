@@ -17,3 +17,9 @@
 .Article p {
     margin:0.5rem 0;
 }
+
+@media(min-width: 769px) {
+    .Article {
+        width: 20%;
+    }
+}
