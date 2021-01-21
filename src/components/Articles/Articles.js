@@ -15,7 +15,7 @@ class Articles extends Component {
 
 
     componentDidUpdate () {
-        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=e936b10cc32a4f8a845f934f8252d03b';
+        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=4191f6171e1049f78a4ab06cccfe4c32';
         const req = new Request(url);
         fetch(req)
             .then(response => response.json())

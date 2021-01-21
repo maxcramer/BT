@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './SearchBar.css';
+
 class SearchBar extends Component {
     state = {
         query: '',
@@ -17,9 +19,8 @@ class SearchBar extends Component {
     render() {
         
         return (
-            <div style={{width: '100%', textAlign: 'center'}}>
+            <div className="SearchBar_container">
                 <input 
-                    style={{width: '20%'}}
                     type='text'
                     query={this.state.query}
                     placeholder="Search Articles"

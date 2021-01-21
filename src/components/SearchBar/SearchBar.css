@@ -1,0 +1,20 @@
+.SearchBar_container {
+    width: 100%;
+    text-align: center;
+}
+
+.SearchBar_container input {
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-family: calibri;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+@media(min-width: 769px) {
+    .SearchBar_container input {
+        width: 20%;
+    }
+}
