@@ -1,5 +1,5 @@
 .Footer_Container {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 56px;
     width: 100%;
