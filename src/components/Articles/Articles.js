@@ -17,7 +17,7 @@ class Articles extends Component {
 
 
     componentDidUpdate () {
-        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=2accfe9bea3746fc83b321842ab03dc8';
+        const url = 'http://newsapi.org/v2/everything?' + `q=${this.state.query}&` + 'apiKey=b4542b7a13db4caabf79e4cbbe8e19e8';
         const req = new Request(url);
         fetch(req)
             .then(response => response.json())
@@ -48,7 +48,7 @@ class Articles extends Component {
                             key={article.title}
                             title={article.title}
                             author={article.author}
-                            content={article.content.slice(0, 150)}
+                            content={article.content}
                         />
             })
         }

@@ -6,7 +6,8 @@ import './Article.css';
 
 const Article = (props) => {
 
-    const reduceContent = (props) => props.content.slice(0, 150);
+    var content = props.content;
+    var reduceContent = content.slice(0, 150);
     
     return (
     <div className="Article">
