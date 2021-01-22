@@ -13,13 +13,13 @@
     font-size: 20px;
     text-align: center;
     font-family: calibri;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid lightgray;
 }
 
 .SearchBar_container button {
     position: absolute;
-    right: 30px;
+    right: 5.5%;
     font-family: calibri;
     color: #ffffff;
     background-color: #5514b4;
@@ -28,13 +28,22 @@
     height: 34px;
     max-height: 34px;
     width: 55px;
-    border-radius: 5px;
+    border-radius: 3px;
+    border-right: 4px solid #410B91;
+    border-bottom: 4px solid #410B91;
 }
 
 
 .SearchBar_container button:disabled {
     background-color: #410B91;
     color:  lightgray
+}
+
+.SearchBar_container button:active {
+    border-left: 4px solid #410B91;
+    border-top: 4px solid #410B91;
+    border-right: none;
+    border-bottom: none;
 }
 
 @media(min-width: 769px) {
