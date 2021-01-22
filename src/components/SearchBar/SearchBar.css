@@ -1,6 +1,9 @@
 .SearchBar_container {
+    display: flex;
     width: 100%;
-    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+
 }
 
 .SearchBar_container input {
@@ -13,8 +16,20 @@
     border: 1px solid lightgray;
 }
 
+.SearchBar_container button {
+    position: absolute;
+    right: 30px;
+    font-family: calibri;
+    color: #333333;
+    border: 1px solid #5514b4;
+    background-color: transparent;
+    cursor: pointer;
+    right: 20px;
+}
+
 @media(min-width: 769px) {
     .SearchBar_container input {
         width: 20%;
     }
 }
+
