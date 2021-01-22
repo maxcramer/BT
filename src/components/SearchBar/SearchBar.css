@@ -31,6 +31,7 @@
     border-radius: 3px;
     border-right: 4px solid #410B91;
     border-bottom: 4px solid #410B91;
+    padding-top: 5px;
 }
 
 
@@ -49,6 +50,10 @@
 @media(min-width: 769px) {
     .SearchBar_container input {
         width: 20%;
+    }
+
+    .SearchBar_container button {
+        right: 34.5%;
     }
 }
 
