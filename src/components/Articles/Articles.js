@@ -60,7 +60,6 @@ class Articles extends Component {
     return (
       <div className="Articles">
         <SearchBar
-          // parentCallback = {this.callbackFunction}
           query={this.state.query}
           callBack={this.doSearch}
         />
