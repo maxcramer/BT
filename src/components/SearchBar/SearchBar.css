@@ -40,8 +40,8 @@
 }
 
 .SearchBar_container button:active {
-    border-left: 4px solid #410B91;
-    border-top: 4px solid #410B91;
+    border-left: 4px solid #7E33EC;
+    border-top: 4px solid #7E33EC;
     border-right: none;
     border-bottom: none;
 }
