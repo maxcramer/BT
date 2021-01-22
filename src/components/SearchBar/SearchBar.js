@@ -14,6 +14,7 @@ class SearchBar extends Component {
 
     handleButtonClick = () => {
         this.props.callBack(this.state.query);
+        console.log('this.props.callBack: ', this.props.callBack);
     };
 
    

@@ -30,13 +30,6 @@ class Articles extends Component {
     if(this.state.query === '') return;
   }
 
-  componentDidUpdate() {
-    
-  }
-
-  // handleSearch = () => {
-  //     this.setState({query: this.props.query})
-  // }
 
   doSearch = async (query) => {
     const articles = await fetchArticles(query);
