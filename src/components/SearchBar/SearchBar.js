@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -27,7 +30,9 @@ class SearchBar extends Component {
                     placeholder="Search Articles"
                     onChange={this.handleOnInputChange}
                 />
-                <button disabled={!this.state.query} onClick={this.handleButtonClick}>Search</button>
+                <button disabled={!this.state.query} onClick={this.handleButtonClick}>
+                    <FontAwesomeIcon className='icon' icon={faSearch} size="lg"/>
+                </button>
 
             </div>
         )
