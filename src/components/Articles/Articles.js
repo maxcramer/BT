@@ -1,7 +1,7 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 
 import Article from "../Article/Article";
-import SearchBar, { query } from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 
 import "./Articles.css";
 

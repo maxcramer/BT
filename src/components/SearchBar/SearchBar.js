@@ -9,12 +9,10 @@ class SearchBar extends Component {
 
     handleOnInputChange = (e => {
         this.setState({ query: e.target.value });      
-        console.log('e.target.value: ', e.target.value);
     });
 
     handleButtonClick = () => {
         this.props.callBack(this.state.query);
-        console.log('this.props.callBack: ', this.props.callBack);
     };
 
    
