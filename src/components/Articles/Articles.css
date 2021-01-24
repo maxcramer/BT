@@ -11,7 +11,7 @@
     margin: 16px 0;
 }
 
-@media(min-width: 798px) {
+@media(min-width: 769px) {
     .articles__container {
         height: 500px;
         overflow: scroll;
